@@ -1,3 +1,4 @@
 #que se dice
-#Ejercicio 1
-print("Wake up baby")
+#Ejercicio 
+NewWorld=("¡Hola Mundo!")
+print(NewWorld)
