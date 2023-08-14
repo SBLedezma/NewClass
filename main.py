@@ -73,15 +73,17 @@ print("el paquete pesa ",R)
 #ejercicio 11
 #ejercicio 12
 
-#ejercicio 13
+#Clase 5
+
+#ejercicio 1
 N=int(input("cuantas puñaladas le pegaron "))
 R=N*(N+1)/2
 if R>20:
   print(R,"usted esta mueto mi hermano")
 else:
   print(R,"al menos esta vivo")
-  '''
-#ejercicio 14
+  
+#ejercicio 2
 N=int(input("dame un numero entero sapa "))
 M=int(input("Dame otro numero sapa "))
 C=N//M
@@ -91,3 +93,27 @@ print("el resultado de la divicion es ",D," El cociente es ",C," y el resto es "
 if C<1:
   print("El divisor es mayor al dividiendo")
   
+#ejercicio 3
+P=float(input("cuanto vamos a invertir manito "))
+i=float(input("cuanto es el interes manito "))
+A=int(input("Por cuantos añitos manito "))
+C=round(P*((i/100)+1)**A)
+if C<100000:
+  print(C," es baja rentabilidad manito")
+elif C>100000 and C<1000000:
+  print(C," Es una rentabilidad moderada manito")
+elif C>1000000:
+  print(C," Es buena invercion manito")
+'''
+#Ejercicio 4
+P=int(input("cuantos payasos va a llevar mi rey "))
+M=int(input("y cuantas Muñecas va a llevar mi rey "))
+R=(P*112)+(M*75)
+if R>3000:
+  X=input("lo vamos a enviar o no lo vamos a enviar ?")
+  if X =="si":
+   print("Ya lo mandamos mi Rey")
+  elif X =="no":
+   print("Cancelamos mision mi Rey")
+
+    
