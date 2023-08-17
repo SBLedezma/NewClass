@@ -104,7 +104,7 @@ elif C>100000 and C<1000000:
   print(C," Es una rentabilidad moderada manito")
 elif C>1000000:
   print(C," Es buena invercion manito")
-'''
+
 #Ejercicio 4
 P=int(input("cuantos payasos va a llevar mi rey "))
 M=int(input("y cuantas Muñecas va a llevar mi rey "))
@@ -116,4 +116,66 @@ if R>3000:
   elif X =="no":
    print("Cancelamos mision mi Rey")
 
-    
+#clase 6 
+#ejercicio 1
+a=float(input("Cuanto es el primer valor? "))
+b=float(input("cuanto es el segundo valor? "))
+def suma(n1,n2):
+ sum=(n1+n2)
+ print(sum)
+suma(a,b)
+
+#ejercicio 2
+a=float(input("Cuanto es el primer valor? "))
+b=float(input("cuanto es el segundo valor? "))
+def resta(n1,n2):
+ rest=(n1-n2)
+ print(rest)
+resta(a,b)
+
+#ejercicio 3
+a=float(input("Cuanto es el primer valor? "))
+b=float(input("cuanto es el segundo valor? "))
+def Multiplicacion(n1,n2):
+ multi=(n1*n2)
+ print(multi)
+Multiplicacion(a,b)
+
+#ejerciciio 4
+a=float(input("Cuanto es el primer valor? "))
+b=float(input("cuanto es el segundo valor? "))
+def Divicion(n1,n2):
+  if n1==0 or n2==0:
+    print("no podemos proceder con 0 mi rey")
+  else:
+   divi=(n1/n2)
+   print(divi)
+Divicion(a,b)
+'''
+#ejercicio 5
+Opr=(input("que operacion vamos a hacer mi rey:"))
+a=float(input("cual es su primer numero mi rey:"))
+b=float(input("cual es su primer numero mi rey:"))
+if Opr==suma:
+ def suma(n1,n2):
+  suma=(n1+n2)
+  print(suma)
+  suma(a,b)
+elif Opr==resta:
+  def resta(n1,n2):
+   resta=(n1-n2)
+   print(resta)
+   resta(a,b)
+elif Opr==multiplicacion:
+   def Multiplicacion(n1,n2):
+    multiplicacion=(n1*n2)
+    print(multiplicacion)
+    Multiplicacion(a,b)
+elif Opr==divicion:
+    def Divicion(n1,n2):
+     if n1==0 or n2==0:
+       print("no podemos proceder con 0 mi rey")
+     else:
+      divicion=(n1/n2)
+      print(divicion)
+    Divicion(a,b)
