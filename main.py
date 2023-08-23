@@ -151,31 +151,98 @@ def Divicion(n1,n2):
    divi=(n1/n2)
    print(divi)
 Divicion(a,b)
-'''
+
 #ejercicio 5
-Opr=(input("que operacion vamos a hacer mi rey:"))
-a=float(input("cual es su primer numero mi rey:"))
-b=float(input("cual es su primer numero mi rey:"))
-if Opr==suma:
- def suma(n1,n2):
-  suma=(n1+n2)
-  print(suma)
+a=float(input("Ingrese numero para operar: "))
+b=float(input("Ingrese otro numero para operar: "))
+Menu=int(input("Este es su menu de operaciones, 1 para suma, 2 para resta, 3 para multiplicion y 4 para dividir, eliga que quiere socio: "))
+def suma(n1,n2):
+  sum=(n2+n1)
+  print("SU SUMA: ",sum)
+def resta(n1,n2):
+  rest=(n2-n1)
+  print("SU RESTA ES: ",rest)
+def multi(n1,n2):
+  mul=(n2*n1)
+  print("SU MULTIPLICION ES: ", mul)
+def divi(n1,n2):
+  if n1==0:
+    print("No sea webon no se puede dividir por cer -_-")
+  else:
+    div=(n1/n2)
+    print("SU DIVISION ES: ", round(div,2))
+if Menu==1:
   suma(a,b)
-elif Opr==resta:
-  def resta(n1,n2):
-   resta=(n1-n2)
-   print(resta)
-   resta(a,b)
-elif Opr==multiplicacion:
-   def Multiplicacion(n1,n2):
-    multiplicacion=(n1*n2)
-    print(multiplicacion)
-    Multiplicacion(a,b)
-elif Opr==divicion:
-    def Divicion(n1,n2):
-     if n1==0 or n2==0:
-       print("no podemos proceder con 0 mi rey")
-     else:
-      divicion=(n1/n2)
-      print(divicion)
-    Divicion(a,b)
+elif Menu==2:
+  resta(a,b)
+elif Menu==3:
+  multi(a,b)
+elif Menu==4:
+  divi(a,b)
+ 
+#clase 6 y 7
+def intereses(inv):
+  d= inv
+  if (d >0 and d<1000000):
+    return 2
+  elif(d>=1000000 and d< 2000000):
+    return 5
+  else:
+     return 7
+
+def calBalance(int, inv):
+  n= int
+  d= inv
+  return round((d*(1+(n/100))),2)
+  
+def ctaAhorro():
+  #inversion, interes, b1,b2,b3 = 0.0
+  inversion=float(input("ingrese el valor de la inversion: "))
+  interes=intereses(inversion)
+  b1=calBalance(interes,inversion)
+  b2= calBalance(interes,b1)
+  b3= calBalance(interes,b2)
+  print("Balance año 1: " + str(b1) + " Balance año 2: " + str(b2) + " Balance año 3: " + str(b3))
+
+ctaAhorro()
+'''
+#clase 8
+#ejercicio 1
+
+def triangulo(b,a):
+ return(b*a)/2
+
+def cuadrado(L,l):
+  return L*l
+
+def circulo(r):
+  return(3.14169*(r**2))
+
+def areafig():
+  area=0.0
+  figura=""
+  figura = input("escriba la figura que le desea sacar el area: ")
+  if (figura.lower()=="triangulo"):
+    base=0.0
+    altura=0.0
+    base = float(input("ingrese la base: "))
+    altura = float(input("ingresa altura: "))
+    area = triangulo(base,altura)
+    print("El area del triangulo es: ", area)
+
+  elif (figura.lower()=="cuadrado"):
+   lado1=0.0
+   lado2=0.0
+   lado1 = float(input("ingrese el lado: ")) 
+   lado2 = float(input("ingresa el segundo lado: "))
+   Area = cuadrado(lado1,lado2)
+   print("El area del cuadrado es: ", Area)
+
+  elif (figura.lower()=="circulo"):
+    radio=0.0
+    radio = float(input("ingrese el radio: "))
+    ARea = circulo(radio)
+    print("El area del circulo es: ", ARea)
+    
+areafig()
+    
