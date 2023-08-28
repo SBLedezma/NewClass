@@ -205,7 +205,7 @@ def ctaAhorro():
   print("Balance año 1: " + str(b1) + " Balance año 2: " + str(b2) + " Balance año 3: " + str(b3))
 
 ctaAhorro()
-'''
+
 #clase 8
 #ejercicio 1
 
@@ -245,4 +245,37 @@ def areafig():
     print("El area del circulo es: ", ARea)
     
 areafig()
+    
+#clase 8
+def maximo(a,b):
+  if a>b:
+    return a
+  else:
+    return b
+
+def minimo(a,b):
+  if a<b:
+    return a
+  else:
+    return b
+
+#programa principal
+x=int(input("un numero: "))
+y=int(input("otro numero: "))
+print(maximo(x-3, minimo(x+2, y-5)))
+'''
+#clase 9
+def descuento(E):
+  return(E*10)/100
+
+def descuentoMarca(E):
+  return(E*5)/100
+
+def IVA(E):
+  return(E*20)/100
+
+def tiendita():
+  E=float(input("cuanto cuesta el Estereo Rey: "))
+  M=input("")
+  if E>=2000000:
     
