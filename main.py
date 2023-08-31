@@ -276,6 +276,14 @@ def IVA(E):
 
 def tiendita():
   E=float(input("cuanto cuesta el Estereo Rey: "))
-  M=input("")
-  if E>=2000000:
-    
+  M=input("su estereo es NOSY rey?: ")
+  if M=="si" and E>=2000000:
+    print("el estereo le sale en: ", E-descuentoMarca(E)-descuento(E)+IVA(E))
+  elif M=="no" and E>=2000000:
+    print("el estereo le sale en: ", E-descuento(E)+IVA(E))
+  elif M=="si" and E<2000000:
+    print("el estereo le sale en: ", E-descuentoMarca(E)+IVA(E))
+  elif M=="no" and E<2000000:
+    print("el estereo le sale en: ", E+IVA(E))
+
+tiendita()
