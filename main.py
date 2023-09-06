@@ -263,7 +263,7 @@ def minimo(a,b):
 x=int(input("un numero: "))
 y=int(input("otro numero: "))
 print(maximo(x-3, minimo(x+2, y-5)))
-'''
+
 #clase 9
 def descuento(E):
   return(E*10)/100
@@ -287,3 +287,66 @@ def tiendita():
     print("el estereo le sale en: ", E+IVA(E))
 
 tiendita()
+
+#Parcial
+def interes2(a):
+ return(a*0.02)
+  
+def interes5(a):
+  return(a*0.05)
+  
+def interes7(a):
+  return(a*0.07)
+  
+def Banco():
+ año1=float(input("que valor va depositar este primer año?:"))
+ if 0> año1 <1000000:
+  año1F=(año1+interes2(año1))
+  print("Esto le quedo este año", año1F)
+ elif 1000000>año1<2000000:
+  año1F=año1+interes5(año1)
+  print("Esto le quedo este año", año1F)
+ elif 2000000>año1:
+   año1F=año1+interes7(año1)
+   print("Esto le quedo este año", año1F)  
+
+ año2=float(input("que valor va depositar este segundo año?:"))
+ if 0>año2<1000000:
+  año2F=año2+interes2(año2)
+  print("Esto le quedo este año", año2F)
+ elif 1000000>año2<2000000:
+  año2F=(año2+interes5(año2))
+  print("Esto le quedo este año", año2F)
+ elif 2000000>año2:
+  año2F=año2+interes7(año2)
+  print("Esto le quedo este año", año2F)
+
+ año3=float(input("que valor va depositar este tercer año?:"))  
+ if 0>año3<1000000:
+   año3F=(año3+interes2(año3))
+   print("Esto le quedo este año", año3F)
+ elif 1000000>año3<2000000:
+   año3F=año3+interes5(año3)
+   print("Esto le quedo este año", año3F)
+ elif 2000000>año3:
+   año3F=año3+interes7(año3)
+   print("Esto le quedo este año", año3F)
+ Balance=(año1F+año2F+año3F)
+ print("este es su balance final",Balance)
+Banco()
+'''
+def porcentaje(w,y):
+
+    return (w*(0+(y/100)))
+
+ 
+
+w=int(input("Ingrese valor: "))
+
+z=int(input("Ingrese porcentaje: "))
+y=(z+886)
+
+print(round(porcentaje(w,y),2))
+
+
+
