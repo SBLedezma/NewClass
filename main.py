@@ -155,7 +155,7 @@ Divicion(a,b)
 #ejercicio 5
 a=float(input("Ingrese numero para operar: "))
 b=float(input("Ingrese otro numero para operar: "))
-Menu=int(input("Este es su menu de operaciones, 1 para suma, 2 para resta, 3 para multiplicion y 4 para dividir, eliga que quiere socio: "))
+Menu=int(input("Este es su menu de operaciones, 1 para suma, 2 para resta, 3 para multiplicion y 4 para dividir, eliga que quiere rey: "))
 def suma(n1,n2):
   sum=(n2+n1)
   print("SU SUMA: ",sum)
@@ -167,7 +167,7 @@ def multi(n1,n2):
   print("SU MULTIPLICION ES: ", mul)
 def divi(n1,n2):
   if n1==0:
-    print("No sea webon no se puede dividir por cer -_-")
+    print("No sea webon no se puede dividir por cero -_-")
   else:
     div=(n1/n2)
     print("SU DIVISION ES: ", round(div,2))
@@ -334,7 +334,7 @@ def Banco():
  Balance=(año1F+año2F+año3F)
  print("este es su balance final",Balance)
 Banco()
-'''
+
 def porcentaje(w,y):
 
     return (w*(0+(y/100)))
@@ -348,5 +348,43 @@ y=(z+886)
 
 print(round(porcentaje(w,y),2))
 
+#clase 11
+A=0
+while A < 10:
+  print(A)
+  A=A+1
 
-
+def Calculadora():
+ while volver <1:
+  a=float(input("Ingrese numero para operar: "))
+  b=float(input("Ingrese otro numero para operar: "))
+  Menu=int(input("Este es su menu de operaciones, 1 para suma, 2 para  resta, 3 para multiplicion y 4 para dividir, eliga que quiere rey: "))
+  volver=0
+  def suma(n1,n2):
+    sum=(n2+n1)
+    print("SU SUMA: ",sum)
+  def resta(n1,n2):
+    rest=(n2-n1)
+    print("SU RESTA ES: ",rest)
+  def multi(n1,n2):
+    mul=(n2*n1)
+    print("SU MULTIPLICION ES: ", mul)
+  def divi(n1,n2):
+    if n1==0:
+      print("no se puede dividir por cero -_-")
+    else:
+      div=(n1/n2)
+      print("SU DIVISION ES: ", round(div,2))
+  if Menu==1:
+    suma(a,b)
+  elif Menu==2:
+    resta(a,b)
+  elif Menu==3:
+    multi(a,b)
+  elif Menu==4:
+    divi(a,b)
+  elif Menu==5:
+   volver=0+1
+'''
+def Mercar():
+  
