@@ -353,38 +353,35 @@ A=0
 while A < 10:
   print(A)
   A=A+1
-
-def Calculadora():
- while volver <1:
-  a=float(input("Ingrese numero para operar: "))
-  b=float(input("Ingrese otro numero para operar: "))
-  Menu=int(input("Este es su menu de operaciones, 1 para suma, 2 para  resta, 3 para multiplicion y 4 para dividir, eliga que quiere rey: "))
-  volver=0
-  def suma(n1,n2):
-    sum=(n2+n1)
-    print("SU SUMA: ",sum)
-  def resta(n1,n2):
-    rest=(n2-n1)
-    print("SU RESTA ES: ",rest)
-  def multi(n1,n2):
-    mul=(n2*n1)
-    print("SU MULTIPLICION ES: ", mul)
-  def divi(n1,n2):
-    if n1==0:
-      print("no se puede dividir por cero -_-")
-    else:
-      div=(n1/n2)
-      print("SU DIVISION ES: ", round(div,2))
-  if Menu==1:
-    suma(a,b)
-  elif Menu==2:
-    resta(a,b)
-  elif Menu==3:
-    multi(a,b)
-  elif Menu==4:
-    divi(a,b)
-  elif Menu==5:
-   volver=0+1
 '''
-def Mercar():
+def suma():
+  return opcion1+opcion2
+def resta():
+  return opcion1-opcion2
+def division():
+  return opcion1/opcion2
+def multiplicacion():
+  return opcion1*opcion2
+
+c=0
+while c!=5:
   
+  opcion1=int(input("ponga un numero: "))
+  
+  opcion2=int(input("ponga otro numero: "))
+
+  c=int(input("elija una opcion \n 1. sumar:\n 2. resta:, \n 3. division: \n 4 multiplicacion: \n 5. terminar operaciones:"))
+  """if (c<6):"""
+    
+  if (c==1):
+    print("la suma es:",suma())
+  elif (c==2):
+    print("la resta es:",resta())
+  elif (c==3):
+    print("la division es:",division())
+  elif (c==4):
+     print("la multiplicacion es:",multiplicacion())
+  elif (c==5):
+    print("Adios")
+  else:
+    print("error")
