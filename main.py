@@ -353,7 +353,7 @@ A=0
 while A < 10:
   print(A)
   A=A+1
-'''
+
 def suma():
   return opcion1+opcion2
 def resta():
@@ -385,3 +385,98 @@ while c!=5:
     print("Adios")
   else:
     print("error")
+    
+#Clase 12
+for c in range(1 ,12 ,2 ):
+  print( c )
+
+#ejercicio 1
+import random
+def adivina_el_numero():
+  numero_secreto = random.randint(1,100)
+  adivinado = False
+
+  while not adivinado:
+      intento = int(input("adivina el numero"))
+      if intento == numero_secreto:
+          print("Es correcto este es el numero")
+          adivinado = True
+      elif intento < numero_secreto:
+        print("el numero es mayor")
+      else:
+        print("el numero es menor")
+adivina_el_numero()
+
+#Ejercicio 2
+def tablas_de_multiplicar():
+  print("Hola")
+  tabla = int(input("De que numero quieres ver la tabla: "))
+
+  for multi in range(1,11):
+    resultado = (tabla * multi)
+    print(tabla, "x", multi, "=" ,resultado)
+tablas_de_multiplicar()
+
+def Factoriali():
+  print("Hola")
+  numero = int(input("cual numero vamos a factorizar: "))
+  factorial = 1
+  
+  for i in range(1, numero + 1):
+    factorial = factorial * i
+    
+  print("esto da su factorial: ", factorial)
+Factoriali()
+'''
+def imprimir_tablero(tablero):
+    for fila in tablero:
+        print(" | ".join(fila))
+        print("-" * 9)
+
+def verificar_ganador(tablero, jugador):
+    for fila in tablero:
+        if all([c == jugador for c in fila]):
+            return True
+
+    for columna in range(3):
+        if all([tablero[fila][columna] == jugador for fila in range(3)]):
+            return True
+
+    if all([tablero[i][i] == jugador for i in range(3)]) or all([tablero[i][2 - i] == jugador for i in range(3)]):
+        return True
+
+    return False
+
+def juego_triqui():
+    tablero = [[" " for _ in range(3)] for _ in range(3)]
+    jugador_actual = "X"
+    movimientos_restantes = 9
+    ganador = None
+
+    print("¡Bienvenido al juego de Triqui!")
+    imprimir_tablero(tablero)
+
+    while movimientos_restantes > 0 and not ganador:
+        fila = int(input(f"Jugador {jugador_actual}, elige una fila (0, 1 o 2): "))
+        columna = int(input(f"Jugador {jugador_actual}, elige una columna (0, 1 o 2): "))
+
+        if fila < 0 or fila > 2 or columna < 0 or columna > 2 or tablero[fila][columna] != " ":
+            print("Movimiento inválido. Inténtalo de nuevo.")
+            continue
+
+        tablero[fila][columna] = jugador_actual
+        imprimir_tablero(tablero)
+
+        if verificar_ganador(tablero, jugador_actual):
+            ganador = jugador_actual
+        else:
+            jugador_actual = "O" if jugador_actual == "X" else "X"
+            movimientos_restantes -= 1
+
+    if ganador:
+        print(f"¡El jugador {ganador} ha ganado!")
+    else:
+        print("¡Es un empate!")
+
+if __name__ == "__main__":
+    juego_triqui()
